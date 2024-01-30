@@ -1,0 +1,99 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+body {
+  background-color: white;
+  color: black;
+    font-family: Tahoma;
+}
+
+.center-menu {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  size: 0.5;
+}
+
+.box{
+background: White;
+opacity: 0.5;
+text-align: center;
+ border: 3px solid #73AD21;
+border-radius: 10px 10px 10px 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+font-size: 1em;
+}
+
+.notbutton {
+  border-radius: 0px;
+  
+  background-color: #171515;
+  border: none;
+  color: #FFFFFF;
+  font-family: Tahoma;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 26px;
+  width: 500px;
+  height: 100px;
+  transition: all 1s;
+  cursor: arrow;
+
+}
+
+.button {
+  background-color: #171515; /* Black/Gray */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition: all 1s;
+  cursor: arrow;
+
+  /*begin animation code*/
+  opacity:0;
+  animation:fadeIn 2s;
+  animation-fill-mode:forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity:1;
+  }
+}
+/*end animation code*/
+
+.button span {
+  cursor: arrow;
+  display: inline-block;
+  position: relative;
+  transition: 1s;
+}
+
+.button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 1s;
+}
+
+.button:hover span {
+  padding-right: 30px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
